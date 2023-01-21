@@ -1,5 +1,5 @@
 # zsh-gcloud
-A simple zsh plugin for the Google Cloud Command Line Interface (gcloud CLI) completions.
+A zsh plugin for the Google Cloud Command Line Interface (gcloud CLI) completions.
 
 ## Install
 Using the [:zap: Zap](https://www.zapzsh.org/) minimal zsh plugin manager, add the following to your `.zshrc`
@@ -10,7 +10,7 @@ plug "wintermi/zsh-gcloud"
 ```
 
 ## Prerequisite Checks
-A simple check will be performed to verify that `gcloud` has been installed:
+A check will be performed to verify that `gcloud` has been installed:
 
 - [`gcloud`](https://cloud.google.com/cli) - Google Cloud Command Line Interface (gcloud CLI)
 
