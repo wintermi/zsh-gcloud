@@ -3,7 +3,6 @@
 
 # Exit if the 'gcloud' command can not be found
 if ! (( $+commands[gcloud] )); then
-    echo "WARNING: 'gcloud' command not found"
     return
 fi
 
