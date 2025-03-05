@@ -6,16 +6,8 @@ if ! (( $+commands[gcloud] )); then
     return
 fi
 
-# Identify the location of the Google Cloud SDK installed
-local DEFAULT_SDK_PATHS=("/opt/homebrew/share/google-cloud-sdk" \
-                         "$HOME/.local/share/mise/installs/gcloud/latest" \
-                         "/usr/share/google-cloud-sdk")
-for sp in "${DEFAULT_SDK_PATHS[@]}"; do
-    if [ -d "$sp" ]; then
-        local SDK_PATH="$sp"
-        break
-    fi
-done
+# Identify the location of the Google Cloud SDK installed: dir containing "bin/gcloud"
+local SDK_PATH=$(dirname $(dirname $(which gcloud)))
 
 # If the Google Cloud SDK path was found
 if [[ ! -z "$SDK_PATH" ]]; then
